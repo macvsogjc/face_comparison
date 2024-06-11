@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition Web App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <h1 class="text-4xl font-bold text-center mb-8">Face Recognition Web App</h1>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="referenceImage">Upload Reference Image:</label>
+            <input id="referenceImage" type="file" accept="image/*" class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="zipFile">Upload Dataset (ZIP file):</label>
+            <input id="zipFile" type="file" accept=".zip" class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer">
+        </div>
+        <button id="submitBtn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Compare</button>
+        <div id="progress" class="mt-4 text-sm text-gray-600"></div>
+        <div id="results" class="mt-8">
+            <!-- Results will be displayed here -->
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
